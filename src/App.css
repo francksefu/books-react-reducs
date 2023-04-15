@@ -1,0 +1,107 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  width: 80%;
+  border: 3px solid black;
+  margin: 0 10%;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+tr:nth-child(odd) {
+  background-color: #e1dcdcb5;
+}
+
+.remove-btn {
+  width: 120px;
+}
+
+button {
+  box-shadow: 3px 2px black;
+  padding: 8px;
+  color: antiquewhite;
+  background-color: yellowgreen;
+}
+
+.remove-btn button {
+  width: 80%;
+  border: 2px solid black;
+  padding: 5px 10px;
+}
+
+input {
+  display: block;
+  width: 60%;
+  border: 2px solid black;
+  font-size: 18px;
+  padding: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.line-vertical {
+  width: 2px;
+  background: black;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+footer h3 {
+  font-weight: 400;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 20px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  list-style-type: none;
+}
+
+form {
+  width: 60%;
+  margin-left: 40%;
+  margin-right: 20%;
+}
+
+button.categorie {
+  width: 30%;
+  margin-left: 35%;
+}
