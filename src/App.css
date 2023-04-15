@@ -100,3 +100,8 @@ form {
   margin-left: 40%;
   margin-right: 20%;
 }
+
+button.categorie {
+  width: 30%;
+  margin-left: 35%;
+}
