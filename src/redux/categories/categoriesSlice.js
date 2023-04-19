@@ -10,5 +10,5 @@ export const categoriesSlice = createSlice({
   reducers: {},
 });
 
-export const { checking } = categoriesSlice.actions;
+export const { reducer } = categoriesSlice.actions;
 export default categoriesSlice.reducer;
