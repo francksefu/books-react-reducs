@@ -105,3 +105,11 @@ button.categorie {
   width: 30%;
   margin-left: 35%;
 }
+
+button.nothing {
+  border: none;
+  color: blue;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
