@@ -1,23 +1,28 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { add } from '../redux/books/booksSlice';
+import { useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
+import { getbook, sendbook } from '../redux/books/booksSlice';
 import BookList from './BookList';
 
 function BookForm() {
   const [titleT, setTitle] = useState('');
   const [authorT, setAuthor] = useState('');
-  const books = useSelector((state) => state.books.all);
+
   const dispatch = useDispatch();
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (titleT !== '' && authorT !== '') {
-      dispatch(add({
-        item_id: `item${books.length + 1}`,
+      await dispatch(sendbook({
+        item_id: uuid(),
         title: titleT,
         author: authorT,
         category: 'Fiction',
       }));
+
+      await dispatch(getbook());
     }
+    setTitle('');
+    setAuthor('');
   };
 
   return (
@@ -28,6 +33,7 @@ function BookForm() {
         <input
           type="text"
           placeholder="Enter title of book:"
+          value={titleT}
           onChange={
             (e) => setTitle(e.target.value)
           }
@@ -35,6 +41,7 @@ function BookForm() {
         <input
           type="text"
           placeholder="Enter author of book:"
+          value={authorT}
           onChange={
             (e) => setAuthor(e.target.value)
           }
