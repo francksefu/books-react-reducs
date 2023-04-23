@@ -2,6 +2,7 @@ import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { getbook } from '../redux/books/booksSlice';
+import phot from '../phot2.png';
 
 function BookState({
   title, author, id,
@@ -17,17 +18,37 @@ function BookState({
     }
   };
   return (
-    <tr>
-      <td>
-        <h2>
+    <div className="lesson">
+      <div className="encad-one">
+        <span className="action">Action</span>
+        <span className="title">
           { title }
-        </h2>
-        <p>
+        </span>
+        <span className="author">
           { author }
-        </p>
-        <button type="button" onClick={() => { removeBook(id); }} className="nothing">remove item</button>
-      </td>
-    </tr>
+        </span>
+        <span className="but">Comments</span>
+        <span className="line"> </span>
+        <buton type="button" className="but" onClick={() => { removeBook(id); }}>Remove</buton>
+        <span className="line"> </span>
+        <span className="but">Edit</span>
+      </div>
+      <div className="encad-2">
+        <img src={phot} alt="contact" className="oval-2" />
+        <div className="chiffre">
+          <span className="percent"> 64% </span>
+          <span className="complete"> completed </span>
+        </div>
+      </div>
+      <div className="line-big"> </div>
+      <div className="encad-3">
+        <span className="current"> CURRENT CHAPTER</span>
+        <span className="current-lesson"> Chap3:&quot;A lesson Learned&quot;</span>
+        <div className="rectangle">
+          <span className="update">UPDATE PROGRESS</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
