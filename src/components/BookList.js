@@ -14,11 +14,9 @@ function BookList() {
 
   return (
     <div>
-      <h2>List of books</h2>
       {isLoading && <p className="loading">Loading books...</p>}
       {!isLoading && (
-      <table>
-        <tbody>
+        <div>
           {
               books.map(
                 (book) => (
@@ -31,8 +29,7 @@ function BookList() {
                 ),
               )
             }
-        </tbody>
-      </table>
+        </div>
       )}
     </div>
   );
